@@ -1,0 +1,6 @@
+.HA_VERSION
+*.db*
+*.log
+secrets.yaml
+.storage
+

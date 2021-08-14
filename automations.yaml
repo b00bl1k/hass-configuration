@@ -1,0 +1,10 @@
+- alias: "Switch light by button"
+  trigger:
+    platform: mqtt
+    topic: "zigbee/button1"
+    payload: "single"
+    value_template: "{{ value_json.action }}"
+  action:
+    service: switch.toggle
+    target:
+      entity_id: switch.livingroom_switch_right

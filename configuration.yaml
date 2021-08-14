@@ -1,0 +1,46 @@
+homeassistant:
+  external_url: !secret ext_url
+
+history:
+
+logbook:
+
+frontend:
+
+updater:
+
+sun:
+
+discovery:
+
+config:
+
+lovelace:
+  mode: yaml
+
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 127.0.0.1
+    - ::1
+
+mqtt:
+  broker: localhost
+  discovery: true
+  birth_message:
+    topic: 'hass/status'
+    payload: 'online'
+  will_message:
+    topic: 'hass/status'
+    payload: 'offline'
+
+automation: !include automations.yaml
+binary_sensor: !include binary_sensor.yaml
+cover: !include cover.yaml
+light: !include light.yaml
+sensor: !include sensor.yaml
+switch: !include switch.yaml
+
+person:
+  - name: Alexey
+    id: alex

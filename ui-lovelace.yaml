@@ -1,0 +1,17 @@
+title: Home
+views:
+  - title: Main
+    path: main
+    icon: mdi:home-assistant
+    badges:
+      - entity: sensor.livingroom_sensor_temperature
+      - entity: sensor.livingroom_sensor_humidity
+      - entity: sensor.livingroom_sensor_pressure
+      - entity: sensor.movement_sensor_illuminance
+      - entity: binary_sensor.movement_sensor_occupancy
+    cards:
+      - type: entities
+        entities:
+          - entity: light.livingroom_light_left
+          - entity: light.livingroom_light_right
+          - entity: cover.livingroom_cover_position

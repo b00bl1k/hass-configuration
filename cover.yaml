@@ -1,0 +1,9 @@
+# MQTT zigbee/livingroom_cover Xiaomi ZNCLDJ11LM Aqara curtain motor
+  - platform: "mqtt"
+    name: "livingroom_cover_position"
+    availability_topic: "zigbee/bridge/state"
+    command_topic: "zigbee/livingroom_cover/set"
+    position_template: "{{ value_json.position }}"
+    set_position_template: "{ \"position\": {{ position }} }"
+    set_position_topic: "zigbee/livingroom_cover/set"
+    position_topic: "zigbee/livingroom_cover"
