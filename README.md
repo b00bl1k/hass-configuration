@@ -1,4 +1,4 @@
-# Home Assistatnt configuration
+# Home Assistant configuration
 ![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m788939357-46af9f30226e1b2f68f8336e) ![Lines of code](https://img.shields.io/tokei/lines/github/b00bl1k/hass-configuration)
 
 ## Server
