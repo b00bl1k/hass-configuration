@@ -1,8 +1,41 @@
-- alias: "Switch light by button"
+- alias: "Switch livingroom light by button1"
   trigger:
     platform: mqtt
     topic: "zigbee/button1"
     payload: "single"
+    value_template: "{{ value_json.action }}"
+  action:
+    service: switch.toggle
+    target:
+      entity_id: switch.livingroom_switch_right
+
+- alias: "Switch desktop light by button1"
+  trigger:
+    platform: mqtt
+    topic: "zigbee/button1"
+    payload: "double"
+    value_template: "{{ value_json.action }}"
+  action:
+    service: light.toggle
+    target:
+      entity_id: light.led_light
+
+- alias: "Switch desktop light by button2"
+  trigger:
+    platform: mqtt
+    topic: "zigbee/button2"
+    payload: "single"
+    value_template: "{{ value_json.action }}"
+  action:
+    service: light.toggle
+    target:
+      entity_id: light.led_light
+
+- alias: "Switch livingroom light by button2"
+  trigger:
+    platform: mqtt
+    topic: "zigbee/button2"
+    payload: "double"
     value_template: "{{ value_json.action }}"
   action:
     service: switch.toggle

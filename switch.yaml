@@ -15,13 +15,3 @@
     payload_on: "ON"
     value_template: "{{ value_json.state_right }}"
     command_topic: "zigbee/livingroom_switch/right/set"
-
-# MQTT zigbee/led_light Xiaomi ZNLDP12LM Aqara smart LED bulb
-  - platform: "mqtt"
-    name: "led_light"
-    state_topic: "zigbee/led_light"
-    availability_topic: "zigbee/bridge/state"
-    value_template: "{% if value_json.power_outage_memory %} true {% else %} false {% endif %}"
-    payload_on: "true"
-    payload_off: "false"
-    command_topic: "zigbee/led_light/set"

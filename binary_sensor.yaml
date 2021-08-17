@@ -1,13 +1,3 @@
-# MQTT zigbee/livingroom_cover Xiaomi ZNCLDJ11LM Aqara curtain motor
-  - platform: "mqtt"
-    name: "livingroom_cover_update_available"
-    state_topic: "zigbee/livingroom_cover"
-    availability_topic: "zigbee/bridge/state"
-    payload_on: true
-    payload_off: false
-    value_template: "{{ value_json.update_available}}"
-    enabled_by_default: false
-
 # MQTT zigbee/movement_sensor Xiaomi RTCGQ11LM Aqara human body movement and illuminance sensor
   - platform: "mqtt"
     name: "movement_sensor_occupancy"
@@ -17,13 +7,3 @@
     payload_on: true
     payload_off: false
     device_class: "motion"
-
-# MQTT zigbee/led_light Xiaomi ZNLDP12LM Aqara smart LED bulb
-  - platform: "mqtt"
-    name: "led_light_update_available"
-    state_topic: "zigbee/led_light"
-    availability_topic: "zigbee/bridge/state"
-    payload_on: true
-    payload_off: false
-    value_template: "{{ value_json.update_available}}"
-    enabled_by_default: false

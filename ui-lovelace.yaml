@@ -14,4 +14,5 @@ views:
         entities:
           - entity: light.livingroom_light_left
           - entity: light.livingroom_light_right
+          - entity: light.led_light
           - entity: cover.livingroom_cover_position

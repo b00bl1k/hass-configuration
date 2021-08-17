@@ -1,4 +1,4 @@
-# MQTT zigbee/button1 Xiaomi WXKG13LM (Aqara T1 wireless mini switch)
+# MQTT zigbee/button1 Xiaomi WXKG13LM Aqara T1 wireless mini switch
   - platform: "mqtt"
     name: "button1_battery"
     state_topic: "zigbee/button1"
@@ -33,7 +33,7 @@
     icon: "mdi:signal"
     state_class: "measurement"
 
-# MQTT zigbee/button2 Xiaomi WXKG13LM (Aqara T1 wireless mini switch)
+# MQTT zigbee/button2 Xiaomi WXKG13LM Aqara T1 wireless mini switch
   - platform: "mqtt"
     name: "button2_battery"
     state_topic: "zigbee/button2"
@@ -89,13 +89,6 @@
     enabled_by_default: false
     icon: "mdi:signal"
     state_class: "measurement"
-  - platform: "mqtt"
-    name: "livingroom_cover_update_state"
-    state_topic: "zigbee/livingroom_cover"
-    availability_topic: "zigbee/bridge/state"
-    icon: "mdi:update"
-    value_template: "{{ value_json['update']['state'] }}"
-    enabled_by_default: false
 
 # MQTT zigbee/movement_sensor Xiaomi RTCGQ11LM Aqara human body movement and illuminance sensor
   - platform: "mqtt"
@@ -151,13 +144,6 @@
     enabled_by_default: false
     icon: "mdi:signal"
     state_class: "measurement"
-  - platform: "mqtt"
-    name: "led_light_update_state"
-    state_topic: "zigbee/led_light"
-    availability_topic: "zigbee/bridge/state"
-    icon: "mdi:update"
-    value_template: "{{ value_json['update']['state'] }}"
-    enabled_by_default: false
 
 # MQTT zigbee/livingroom_sensor Xiaomi WSDCGQ11LM Aqara temperature, humidity and pressure sensor
   - platform: "mqtt"
