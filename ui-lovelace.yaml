@@ -16,3 +16,15 @@ views:
           - entity: light.livingroom_light_right
           - entity: light.led_light
           - entity: cover.livingroom_cover_position
+  - title: Service
+    path: service
+    icon: mdi:view-module-outline
+    cards:
+      - type: entities
+        entities:
+          - switch.zigbee_permit_join
+          - type: divider
+          - sensor.button1_battery
+          - sensor.button2_battery
+          - sensor.movement_sensor_battery
+          - sensor.livingroom_sensor_battery

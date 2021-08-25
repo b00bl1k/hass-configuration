@@ -15,3 +15,12 @@
     payload_on: "ON"
     value_template: "{{ value_json.state_right }}"
     command_topic: "zigbee/livingroom_switch/right/set"
+
+# MQTT zigbee/bridge/info permit join
+  - platform: mqtt
+    name: "zigbee_permit_join"
+    state_topic: "zigbee/bridge/info"
+    value_template: '{{ value_json.permit_join | lower }}'
+    command_topic: "zigbee/bridge/request/permit_join"
+    payload_on: "true"
+    payload_off: "false"
