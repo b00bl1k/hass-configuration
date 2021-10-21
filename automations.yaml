@@ -41,3 +41,26 @@
     service: switch.toggle
     target:
       entity_id: switch.livingroom_switch_right
+
+- alias: "Close the curtains in the evening"
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "00:30:00"
+  action:
+    service: cover.close_cover
+    target:
+      entity_id: cover.livingroom_cover_position
+
+- alias: "Open the curtains in the morning"
+  trigger:
+    platform: time
+    at: "09:00:00"
+  condition:
+    condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: "on"
+  action:
+    service: cover.open_cover
+    target:
+      entity_id: cover.livingroom_cover_position

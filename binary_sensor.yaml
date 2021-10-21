@@ -1,9 +1,13 @@
 # MQTT zigbee/movement_sensor Xiaomi RTCGQ11LM Aqara human body movement and illuminance sensor
-  - platform: "mqtt"
-    name: "movement_sensor_occupancy"
-    state_topic: "zigbee/movement_sensor"
-    availability_topic: "zigbee/bridge/state"
-    value_template: "{{ value_json.occupancy }}"
-    payload_on: true
-    payload_off: false
-    device_class: "motion"
+- platform: "mqtt"
+  name: "movement_sensor_occupancy"
+  state_topic: "zigbee/movement_sensor"
+  availability_topic: "zigbee/bridge/state"
+  value_template: "{{ value_json.occupancy }}"
+  payload_on: true
+  payload_off: false
+  device_class: "motion"
+
+- platform: workday
+  name: "workday_sensor"
+  country: RU
